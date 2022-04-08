@@ -60,7 +60,8 @@ public List<Transaction> getAllTransactionsByDepoit(String number) throws Transa
         LOGGER.debug("getAllTransactionsByDepoit Deposit number is null");
         throw new TransactionCreateException("Deposit number is null");
     }
-        return transactionRepository.findAllBySourceNumberEqualsOrDestinationNumberEquals(number, number);
+
+        return transactionRepository.findAllBySourceNumberEqualsOrDestinationNumberEquals(number,number);
 }
 //======================================================================================
 public Transaction getTransactionsByIssueTracking(String issueTracking){

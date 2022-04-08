@@ -11,5 +11,8 @@ import java.util.List;
 public interface TransactionRepository extends JpaRepository<Transaction, Long> {
 
     Transaction findDepositByIssueTracking(String number);
+
     List<Transaction> findAllBySourceNumberEqualsOrDestinationNumberEquals(String source, String destination);
+
 }
+
